@@ -51,5 +51,9 @@ export const globalStyles = StyleSheet.create({
       marginBottom: 10,
       marginLeft: 10,
     },
+    text: {
+      fontSize: 30,
+      color: 'blue'
+    }
 
   });

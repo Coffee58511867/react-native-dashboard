@@ -7,30 +7,31 @@ import DashboardScreen from "./components/DashboardScreen";
 const Stack = createStackNavigator();
 
 export default function App() {
-  return(
+  return (
     <NavigationContainer>
-         <Stack.Navigator
-      initialRouteName="Splash"
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: "#0080ff",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
-        headerTitleAlign: "center",
-      }}
-    >
-      <Stack.Screen name="Splash" 
-       options={{
-        headerShown: false,
-      }}
-      component={SplashScreen} />
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Dashboard" component={DashboardScreen} />
-    </Stack.Navigator>
+      <Stack.Navigator
+        initialRouteName="Splash"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#0080ff",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerTitleAlign: "center",
+        }}
+      >
+        <Stack.Screen
+          name="Splash"
+          options={{
+            headerShown: false,
+          }}
+          component={SplashScreen}
+        />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Dashboard" component={DashboardScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
-  )
- 
+  );
 }
