@@ -1,13 +1,15 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import HomeScreen from "./components/HomeScreen";
+import SplashScreen from "./components/SplashScreen";
+import DashboardScreen from "./components/DashboardScreen";
 
 const Stack = createStackNavigator();
 
 export default function App() {
-  return
- (
-  <NavigationContainer>
-       <Stack.Navigator
+  return(
+    <NavigationContainer>
+         <Stack.Navigator
       initialRouteName="Splash"
       screenOptions={{
         headerStyle: {
@@ -24,12 +26,11 @@ export default function App() {
        options={{
         headerShown: false,
       }}
-      component={Splashcreen} />
-      <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="Menu" component={TopBar} />
-      <Stack.Screen name="Register" component={RegisterScreen} />
+      component={SplashScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Dashboard" component={DashboardScreen} />
     </Stack.Navigator>
-  </NavigationContainer>
- )
+    </NavigationContainer>
+  )
+ 
 }
