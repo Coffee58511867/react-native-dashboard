@@ -55,5 +55,9 @@ export const globalStyles = StyleSheet.create({
       fontSize: 30,
       color: 'blue'
     },
+    img: {
+      height: 200,
+      width: 200,
+    }
 
   });

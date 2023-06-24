@@ -1,15 +1,17 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Image, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { globalStyles } from "../styles/global";
 
 const Home1 = () => {
-return (
-	<View style={globalStyles.container}>
-	<Text style={{ color: "#006600", fontSize: 40 }}>Home Screen!</Text>
-	<Ionicons name="md-home" size={80} color="#006600" />
-	</View>
-);
+
+	const image = {uri: 'https://legacy.reactjs.org/logo-og.png'};
+  return (
+    <View style={globalStyles.container}>
+      <Image style={globalStyles.img} source={require("../assets/icon.png")} />
+	  <Image style={globalStyles.img} source={image} />
+    </View>
+  );
 };
 
 export default Home1;

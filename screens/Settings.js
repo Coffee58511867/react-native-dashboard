@@ -1,14 +1,33 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Text, View, ImageBackground, StyleSheet } from "react-native";
 
 const Settings = () => {
+	const image = {uri: 'https://legacy.reactjs.org/logo-og.png'};
 return (
-	<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-	<Text style={{ color: "#006600", fontSize: 40 }}>Settings Screen!</Text>
-	<Ionicons name="md-settings-outline" size={80} color="#006600" />
+	<View style={{ flex: 1}}>
+	<ImageBackground source={image} resizeMode="cover" style={styles.image}>
+      <Text style={styles.text}>Inside</Text>
+    </ImageBackground>
 	</View>
 );
 };
+
+const styles = StyleSheet.create({
+	container: {
+	  flex: 1,
+	},
+	image: {
+	  flex: 1,
+	  justifyContent: 'center',
+	},
+	text: {
+	  color: 'white',
+	  fontSize: 42,
+	  lineHeight: 84,
+	  fontWeight: 'bold',
+	  textAlign: 'center',
+	  backgroundColor: '#000000c0',
+	},
+  });
 
 export default Settings;
