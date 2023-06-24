@@ -5,7 +5,7 @@ import { createMaterialBottomTabNavigator } from
 	"react-navigation-material-bottom-tabs";
 
 import HomeScreen from "./HomeScreen1";
-import UserScreen from "./SettingsScreen";
+import UserScreen from "./ProfileScreen"
 import SettingScreen from "./Settings";
 
 const TabNavigator = createMaterialBottomTabNavigator(
