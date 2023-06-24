@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-import { FlatList, Text, TextInput, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { globalStyles } from "../styles/global";
 import Card from "../shared/card";
+import { Ionicons } from "@expo/vector-icons";
+
 
 export default function DashboardScreen() {
   const [movies, setMovies] = useState([
@@ -14,7 +21,6 @@ export default function DashboardScreen() {
 
   return (
     <View style={globalStyles.container}>
-    
       <FlatList
         data={movies}
         renderItem={({ item }) => (
@@ -27,6 +33,15 @@ export default function DashboardScreen() {
           </Card>
         )}
       />
+      <View style={{ flexDirection: "row" , justifyContent: 'space-between', alignItems: 'stretch'}}>
+        <Text style={{fontSize: 26, marginRight: 130}}>Bottom Me</Text>
+
+        <Ionicons
+            name="md-home"
+            size={40}
+            color="blue"
+          />
+      </View>
     </View>
   );
 }
