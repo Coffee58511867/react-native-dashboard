@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextInput, View } from "react-native";
+import { TextInput, View , Text} from "react-native";
 import { globalStyles } from "../styles/global";
 import Button from "../shared/button";
 import { SelectList } from "react-native-dropdown-select-list";
@@ -14,6 +14,11 @@ export default function Login() {
     { key: "India", value: "India" },
     { key: "NewZealand", value: "NewZealand" },
   ];
+  const [gender, setGender] = useState([
+    { key: "Male", value: "Male" },
+    { key: "Female", value: "Female" },
+    { key: "Other", value: "Other" },
+  ]);
   const [selected, setSelected] = React.useState("");
 
   const handleLogin = () => {
@@ -25,6 +30,7 @@ export default function Login() {
   };
   return (
     <View style={globalStyles.container}>
+        <Text style={{fontSize: 30, padding: 20}}> Welcome Back</Text>
       <TextInput
         style={globalStyles.input}
         placeholder="Username"
@@ -32,8 +38,10 @@ export default function Login() {
         value={username}
         onChangeText={(value) => setUsername(value)}
       />
-      <View style={{width: 310, padding: 5}}> 
-        <SelectList setSelected={setSelected} data={data} style={{}} />
+      <View style={{ width: 310, padding: 5 }}>
+        <SelectList setSelected={setSelected} data={data} />
+      </View>
+      <View style={{ width: 310, padding: 5 }}>
       </View>
       <TextInput
         style={globalStyles.input}

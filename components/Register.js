@@ -4,7 +4,7 @@ import { globalStyles } from "../styles/global";
 import Button from "../shared/button";
 import { SelectList } from "react-native-dropdown-select-list";
 
-export default class Register extends React.Component {
+class Register extends Component {
   render() {
     const [username, setUsername] = useState("");
     const [phone, setPhone] = useState("");
@@ -57,3 +57,5 @@ export default class Register extends React.Component {
     );
   }
 }
+
+export default Register;
