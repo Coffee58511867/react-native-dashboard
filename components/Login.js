@@ -16,7 +16,7 @@ export default function Login(){
         }
     }
     return(
-        <View style={{flex: 1, padding: 20}}>
+        <View style={globalStyles.container}>
          <TextInput 
          style={globalStyles.input}
          placeholder="Username"
