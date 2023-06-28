@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { TextInput, View , Text} from "react-native";
+import { TextInput, View , Text, Image} from "react-native";
 import { globalStyles } from "../styles/global";
 import Button from "../shared/button";
 import { SelectList } from "react-native-dropdown-select-list";
+import { Ionicons } from "@expo/vector-icons";
+import CustomInput from "../shared/CustomInput";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
   const data = [
     { key: "Canada", value: "Canada" },
     { key: "England", value: "England" },
@@ -30,6 +33,11 @@ export default function Login() {
   };
   return (
     <View style={globalStyles.container}>
+        <Ionicons
+            name="md-person-circle-outline"
+            size={120}
+            color="blue"
+          />
         <Text style={{fontSize: 30, padding: 20}}> Welcome Back</Text>
       <TextInput
         style={globalStyles.input}
@@ -50,6 +58,12 @@ export default function Login() {
         value={password}
         onChangeText={(value) => setPassword(value)}
       />
+      <CustomInput
+        placeholder="Phone Number"
+        keyboardType="visible-password" 
+        value={gender}
+        onChangeText={value => setPhone(value)}
+        />
       <Button text="Login" onPress={handleLogin} />
     </View>
   );
