@@ -18,6 +18,13 @@ export default function HomeScreen({ navigation }) {
       console.log(error);
     }
   };
+  const handleLogin = () => {
+    try {
+      navigation.push("Login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <View style={globalStyles.container}>
       <Text style={globalStyles.text}>Good Morning</Text>
