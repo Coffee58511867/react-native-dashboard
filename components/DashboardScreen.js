@@ -33,15 +33,6 @@ export default function DashboardScreen() {
           </Card>
         )}
       />
-      <View style={{ flexDirection: "row" , justifyContent: 'space-between', alignItems: 'stretch'}}>
-        <Text style={{fontSize: 26, marginRight: 130}}>Bottom Me</Text>
-
-        <Ionicons
-            name="md-home"
-            size={40}
-            color="blue"
-          />
-      </View>
     </View>
   );
 }

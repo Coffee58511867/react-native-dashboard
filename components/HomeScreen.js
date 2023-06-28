@@ -22,6 +22,7 @@ export default function HomeScreen({ navigation }) {
     <View style={globalStyles.container}>
       <Text style={globalStyles.text}>Good Morning</Text>
       <CustomButton text="Go to Dashboard" onPress={handleDashboard} />
+      <CustomButton text="Login" onPress={handleLogin} />
       <CustomButton text="Go to Dashboard2" onPress={handleDashboard2} />
     </View>
   );

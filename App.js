@@ -4,6 +4,7 @@ import HomeScreen from "./components/HomeScreen";
 import SplashScreen from "./components/SplashScreen";
 import DashboardScreen from "./components/DashboardScreen";
 import BottomNav from "./screens/BottomNav";
+import Login from "./components/Login";
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,7 @@ export default function App() {
         />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Dashboard" component={DashboardScreen} />
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="HomePage" component={BottomNav} />
       </Stack.Navigator>
     </NavigationContainer>
